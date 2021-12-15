@@ -1,0 +1,203 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    padding: 20px 0;
+}
+
+div.contenedor {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Primer nivel*/
+.navegacion {
+    background-color: #db008d;
+}
+
+nav {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.navegacion>nav>ul>li {
+    float: left;
+}
+
+nav ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+nav ul li a:hover {
+    background: #00b8e4
+}
+
+/*Segundo nivel*/
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background: rgba(0, 184, 228, 0.7)
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul li:hover {
+    background: rgba(0, 184, 228, 1)
+}
+
+/*Contenido*/
+div.contenido::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+main {
+    width: 70%;
+    float: left;
+    padding: 40px;
+}
+
+/*Post*/
+article {
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00b8e4;
+}
+
+article img {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+article p {
+    line-height: 2;
+    text-align: justify;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    background: #00b8e4;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*aside*/
+aside {
+    width: 30%;
+    float: right;
+    margin-top: 30px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    padding: 10px;
+    0px 10px 10px;
+}
+
+aside ul li:hover {
+    background: #00b8e4;
+    cursor: pointer;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #00b8e4;
+}
+
+aside ul li:hover a {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*Footer*/
+footer {
+    background: #db008d;
+    padding-top: 40px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+footer .contenedor::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+footer div.nosotros {
+    float: left;
+    width: 30%;
+    color: #ffffff;
+}
+
+footer div.menu {
+    float: right;
+    width: 40%;
+    text-align: center;
+    margin-right: 50px;
+}
+
+footer nav {
+    width: auto;
+}
+
+footer nav ul li a {
+    width: auto;
+    float: left;
+}
+
+p.copyrigth {
+    padding: 30px 0;
+    text-align: center;
+    color: #ffffff;
+}
